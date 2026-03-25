@@ -5,14 +5,15 @@ import org.junit.Test;
 
 public class RhymersJUnitTest {
 
+    public static final int TEST_VALUE = 4;
+
     @Test
     public void testCountIn() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-        int testValue = 4;
-        rhymer.countIn(testValue);
+        rhymer.countIn(TEST_VALUE);
 
         int result = rhymer.peekaboo();
-        Assert.assertEquals(testValue, result);
+        Assert.assertEquals(TEST_VALUE, result);
     }
 
     @Test
